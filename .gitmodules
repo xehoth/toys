@@ -1,0 +1,3 @@
+[submodule "TruthTableGenerator"]
+	path = TruthTableGenerator
+	url = https://github.com/xehoth/TruthTableGenerator.git
