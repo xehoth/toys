@@ -1,8 +1,6 @@
 #ifndef PIXEL_GUI_SHADER_H_
 #define PIXEL_GUI_SHADER_H_
 #include <glad/glad.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
 #include <string>
@@ -111,15 +109,6 @@ class ShaderProgram {
 
   void setVec3(const std::string &name, GLfloat x, GLfloat y, GLfloat z) const {
     glUniform3f(getUniformLocation(name), x, y, z);
-  }
-
-  void setVec3(const std::string &name, const glm::vec3 &value) const {
-    glUniform3fv(getUniformLocation(name), 1, glm::value_ptr(value));
-  }
-
-  void setMat4(const std::string &name, const glm::mat4 &mat) const {
-    glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE,
-                       glm::value_ptr(mat));
   }
 
   ~ShaderProgram() { release(); }
