@@ -6,6 +6,7 @@ find_package(OpenMP REQUIRED)
 file(GLOB SRC_FILES *.cpp)
 add_executable(main ${SRC_FILES})
 
-
-target_compile_options(main PRIVATE /arch:AVX2)
+if (MSVC)
+  target_compile_options(main PRIVATE /arch:AVX2)
+endif()
 target_link_libraries(main PRIVATE glad::glad glfw OpenMP::OpenMP_CXX)
