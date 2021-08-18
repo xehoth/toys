@@ -2,6 +2,7 @@
 
 some toys.
 
+- font-rendering: Render fonts in OpenGL, supporting UTF-8 texts.
 - PixelGui: Providing `setPixel` function based on OpenGL.
 - RayTracingInOneWeekend: Implement a simple ray tracer.
 - rsa: A simple RSA implementation in Python.
